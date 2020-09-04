@@ -75,7 +75,7 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 
 ## O que deverá ser desenvolvido
 
-Para fixar os conteúdos de algoritmos e estrutura de dados vistos até agora, você fará um projeto que tem como principal objetivo resolver problemas e otimizar algoritmos que fazem parte do cotidiano de uma pessoa desenvolvedora de software.
+Para fixar os conteúdos de algoritmos e estrutura de dados vistos até agora, você fará um projeto que tem como principal objetivo resolver problemas e otimizar algoritmos do tipo que aparecem em inúmeros processos de entrevista por _whiteboard_ e que vão acelerar muito a sua capacidade de resolver problemas!
 
 Pessoas desenvolvedoras de software, além de serem muito boas em implementações, devem, também, ser boas resolvendo problemas e otimizando algoritmos. No projeto de hoje, vamos treinar, ainda mais, a sua capacidade de resolução de problemas e otimização de código, que envolve algumas habilidades:
 
@@ -160,40 +160,46 @@ Você trabalha na maior empresa de educação do Brasil. Um certo dia, sua/seu `
 
 Toda vez que uma pessoa estudante abre o sistema, é cadastrado no banco de dados o horário de entrada (`start_time`). Da mesma forma funciona quando o estudante sai do sistema, é cadastrado no banco de dados o horário de saída (`end_time`).
 
-Seu trabalho é "cruzar" esses dados para descobrir qual o melhor horário para disponibilizar os conteúdos.
+Seu trabalho é descobrir qual o melhor horário para disponibilizar os conteúdos. Teste sua função com `força bruta`. Para achar o melhor horário, passe valores diferentes para a variável `target_time`, analisando o retorno da função.
 
 _Dica:_ Quando vou saber qual o melhor horário? Quando o contador retornado pela função for o maior.
 
 **Exemplo:**
 
 ```md
+# Nos arrays temos 6 estudantes
+
+# estudante   1  2  3  4  5  6
 start_time = [2, 1, 2, 1, 4, 4]
-end_time = [2, 2, 3, 5, 5, 5]
+end_time   = [2, 2, 3, 5, 5, 5]
 
-target_time = 5  # saída: 3
-target_time = 4  # saída: 3
-target_time = 3  # saída: 2
-target_time = 2  # saída: 4
-target_time = 1  # saída: 2
+target_time = 5  # saída: 3, pois o quarto, o quinto e o sexto estudante estavam estudando nesse horário
+target_time = 4  # saída: 3, pois o quarto, o quinto e o sexto estudante estavam estudando nesse horário ou em um horário em que o 4 está no meio (no caso do quarto estudante)
+target_time = 3  # saída: 2, pois o terceiro, o quarto e o quinto estudante estavam estudando nesse horário ou em um horário em que o 3 está no meio (no caso do quarto estudante)
+target_time = 2  # saída: 4, pois o primeiro, o segundo, o terceiro e o quarto estudante estavam estudando nesse horário ou em um horário em que o 2 está no meio
+target_time = 1  # saída: 2, pois o segundo e o quarto estudante estavam estudando nesse horário
 
-Para esse exemplo, o melhor horário é o `2`
+Para esse exemplo, julgue que o melhor horário é o `2`
 ```
 
 O índice `0` da lista `start_time` e o índice `0` da lista `end_time` são pertencentes **à mesma pessoa usuária**. Ou seja, o índice `0` da lista `start_time` e `end_time` são os horários de início e termino do estudo de uma pessoa usuária. O índice `1` da lista `start_time` e `end_time` são os horários de início e termino de estudos de outra pessoa usuária e por aí vai.
 
-**Nota:** Caso mais de um `target_time` tenham empatado com a maior saída, o melhor horário é entre os horários empatados. Exemplo:
+Caso mais de um `target_time` tenham empatado com a maior saída, o melhor horário é entre os horários empatados. Exemplo:
 
 ```md
+# Nos arrays temos 4 estudantes
+
+# estudante   1  2  3  4
 start_time = [4, 1, 3, 2]
-end_time = [4, 3, 4, 5]
+end_time   = [4, 3, 4, 5]
 
-target_time = 5  # saída: 1
-target_time = 4  # saída: 3
-target_time = 3  # saída: 3
-target_time = 2  # saída: 2
-target_time = 1  # saída: 1
+target_time = 5  # saída: 1, pois só o estudante do último índice estudou até 5
+target_time = 4  # saída: 3, pois o primeiro estudante, o segundo e o último estudaram no horário de 4 ou em um horário que o 4 está no meio (no caso do último estudante)
+target_time = 3  # saída: 3, pois o segundo estudante, o terceiro e o último estudaram no horário de 3 ou em um horário que o 3 está no meio (no caso do último estudante)
+target_time = 2  # saída: 2, pois o segundo e o último estudante estudaram no horário de 2 ou em um horário que o 2 está no meio (no caso do segundo estudante)
+target_time = 1  # saída: 1, pois só o segundo estudante estudou no horário 1 (no caso começou no horário 1)
 
-Para esse exemplo, o melhor horário é entre `3` e `4`
+Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 ```
 
 ##### As seguintes verificações serão feitas:
@@ -204,7 +210,7 @@ Para esse exemplo, o melhor horário é entre `3` e `4`
 
 - Monte o `start_time` e o `end_time` da maneira que quiser;
 
-- Caso o `target_time` passado não exista, o valor retornado pela função deve ser `0`.
+- Caso o `target_time` passado não exista, o valor retornado pela função deve ser `0`;
 
 #### 2 - 
 
