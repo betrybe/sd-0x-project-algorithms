@@ -160,7 +160,7 @@ Você trabalha na maior empresa de educação do Brasil. Um certo dia, sua/seu `
 
 Toda vez que uma pessoa estudante abre o sistema, é cadastrado no banco de dados o horário de entrada (`start_time`). Da mesma forma funciona quando o estudante sai do sistema, é cadastrado no banco de dados o horário de saída (`end_time`).
 
-Seu trabalho é descobrir qual o melhor horário para disponibilizar os conteúdos. Teste sua função com `força bruta`. Para achar o melhor horário, passe valores diferentes para a variável `target_time`, analisando o retorno da função.
+Seu trabalho é descobrir qual o melhor horário para disponibilizar os conteúdos. Para achar o horário, utilize `força bruta`. Ou seja, para achar o melhor horário, passe valores diferentes para a variável `target_time`, analisando o retorno da função.
 
 _Dica:_ Quando vou saber qual o melhor horário? Quando o contador retornado pela função for o maior.
 
