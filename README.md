@@ -202,7 +202,9 @@ Para esse exemplo, o melhor horário é entre `3` e `4`
 
 - Algoritmo deve utilizar a solução iterativa;
 
----
+- Monte o `start_time` e o `end_time` da maneira que quiser;
+
+- Caso o `target_time` passado não exista, o valor retornado pela função deve ser `0`.
 
 #### 2 - 
 
