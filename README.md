@@ -152,9 +152,59 @@ $ python3 -m nome_do_arquivo.py
 
 ## Requisitos obrigatórios:
 
+### Resolução de problemas
 
+#### 1 - Número de estudantes fazendo o dever de casa no mesmo horário
+
+Você trabalha na maior empresa de educação do Brasil. Um certo dia, sua/seu `PM` quer saber qual horário tem a maior quantidade de pessoas acessando o conteúdo da plataforma ao mesmo tempo. Com esse dado em mãos, o/a PM saberá qual é o melhor horário para disponibilizar os materiais de estudo para ter o maior engajamento possível no sistema.
+
+Toda vez que uma pessoa estudante abre o sistema, é cadastrado no banco de dados o horário de entrada (`start_time`). Da mesma forma funciona quando o estudante sai do sistema, é cadastrado no banco de dados o horário de saída (`end_time`).
+
+Seu trabalho é "cruzar" esses dados para descobrir qual o melhor horário para disponibilizar os conteúdos.
+
+_Dica:_ Quando vou saber qual o melhor horário? Quando o contador retornado pela função for o maior.
+
+**Exemplo:**
+
+```md
+start_time = [2, 1, 2, 1, 4, 4]
+end_time = [2, 2, 3, 5, 5, 5]
+
+target_time = 5  # saída: 3
+target_time = 4  # saída: 3
+target_time = 3  # saída: 2
+target_time = 2  # saída: 4
+target_time = 1  # saída: 2
+
+Para esse exemplo, o melhor horário é o `2`
+```
+
+O índice `0` da lista `start_time` e o índice `0` da lista `end_time` são pertencentes **à mesma pessoa usuária**. Ou seja, o índice `0` da lista `start_time` e `end_time` são os horários de início e termino do estudo de uma pessoa usuária. O índice `1` da lista `start_time` e `end_time` são os horários de início e termino de estudos de outra pessoa usuária e por aí vai.
+
+**Nota:** Caso mais de um `target_time` tenham empatado com a maior saída, o melhor horário é entre os horários empatados. Exemplo:
+
+```md
+start_time = [4, 1, 3, 2]
+end_time = [4, 3, 4, 5]
+
+target_time = 5  # saída: 1
+target_time = 4  # saída: 3
+target_time = 3  # saída: 3
+target_time = 2  # saída: 2
+target_time = 1  # saída: 1
+
+Para esse exemplo, o melhor horário é entre `3` e `4`
+```
+
+##### As seguintes verificações serão feitas:
+
+- Complexidade do algoritmo esperada: `O(n)`;
+
+- Algoritmo deve utilizar a solução iterativa;
 
 ---
+
+#### 2 - 
 
 ### DURANTE O DESENVOLVIMENTO
 
