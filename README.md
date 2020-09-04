@@ -154,7 +154,7 @@ $ python3 -m nome_do_arquivo.py
 
 ### Resolução de problemas
 
-#### 1 - Número de estudantes fazendo o dever de casa no mesmo horário
+#### 1 - Número de estudantes estudando no mesmo horário
 
 Você trabalha na maior empresa de educação do Brasil. Um certo dia, sua/seu `PM` quer saber qual horário tem a maior quantidade de pessoas acessando o conteúdo da plataforma ao mesmo tempo. Com esse dado em mãos, o/a PM saberá qual é o melhor horário para disponibilizar os materiais de estudo para ter o maior engajamento possível no sistema.
 
