@@ -95,11 +95,9 @@ Tendo essas habilidades descritas acima, junto com algumas outras, farão de voc
 
 ## Desenvolvimento e testes
 
-Este repositório está dividido em duas pastas, `challenges` e `tests`. A pasta `challenges` contém todos os arquivos que você utilizá nesse projeto.
+Este repositório é composto por uma pasta, `challenges`. Essa pasta contém todos os arquivos que você utilizará nesse projeto.
 
 Cada arquivo `.py`, dentro da pasta `challenges`, representa um requisito. Ou seja, os arquivos não tem ligação uns com os outros. Logo, os problemas devem ser resolvidos de forma separada.
-
-A pasta `tests` segue a mesma ideia da pasta `challenges`, contendo um arquivo de teste para cada requisito do projeto.
 
 Este repositório já contém um _template_ com a estrutura de diretórios e arquivos, tanto de código quanto de teste criados. Veja abaixo:
 
@@ -108,9 +106,6 @@ Este repositório já contém um _template_ com a estrutura de diretórios e arq
 ├── challenges
 │   ├── challenge_
 │   └── challenge_
-├── tests
-│   ├── test_
-│   └── test_
 ├── README.md
 ├── requirements.txt
 └── setup.cfg
@@ -204,7 +199,7 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 ##### As seguintes verificações serão feitas:
 
-- Complexidade do algoritmo esperada: `O(n)`;
+- Complexidade de tempo esperada: `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -212,13 +207,52 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 - Caso o `target_time` passado não exista, o valor retornado pela função deve ser `0`;
 
+- Código deve ser feito dentro do arquivo `challenge_study_schedule.py`
+
 #### 2 - Recursividade
 
 
 
 #### 3 - Algoritmo de ordenação
 
+Faça um algoritmo que consiga comparar duas _strings_ e identificar se uma é um anagrama da outra. Ou seja, sua função irá receber duas strings de parâmetro e o retorno da função será um _booleano_, `True` ou `False`.
 
+**Exemplo**:
+
+```md
+first_string = "ana"
+second_string = "ana"
+# saída: True
+# Explicação: Nesse caso o retorno da função é True, pois a palavra "ana" é um anagrama.
+
+
+# Vamos ver um exemplo um pouco mais difícil? Ana foi simples de enxergar que era um anagrama
+first_string = "pato"
+second_string = "tapo"
+# saída: True
+# Explicação: Nesse caso o retorno também é True, pois tapo é um anagrama para pato.
+
+
+# Agora vamos pra um exemplo onde não existe um anagrama
+first_string = "coxinha"
+second_string = "empada"
+# saída: False
+# Explicação: Bom, nesse caso a palavra empada não é um anagrama para coxinha e vice versa.
+```
+
+##### As seguintes verificações serão feitas:
+
+- Complexidade de tempo esperada: `O(n log n)`;
+
+- Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_ e _Quick sort_), desde que atinja a complexidade `O(n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
+
+- Você deve fazer sua própria implementação do algoritmo de ordenação. Ou seja, você não poderá utilizar bibliotecas com os algoritmos prontos;
+
+- A função retorna `True` caso uma _string_ seja um anagrama da outra;
+
+- A função retorna `False` caso uma _string_ **não seja** um anagrama da outra;
+
+- Código deve ser feito dentro do arquivo `challenge_anagrams.py`;
 
 ### Requisitos bônus:
 
