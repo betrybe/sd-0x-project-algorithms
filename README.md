@@ -244,7 +244,7 @@ second_string = "empada"
 
 - Complexidade de tempo esperada: `O(n log n)`;
 
-- Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_ e _Quick sort_), desde que atinja a complexidade `O(n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
+- Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_, _Quick sort_ ou _TimSort_), desde que atinja a complexidade `O(n log n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
 
 - Você deve fazer sua própria implementação do algoritmo de ordenação. Ou seja, você não poderá utilizar bibliotecas com os algoritmos prontos;
 
