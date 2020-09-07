@@ -219,19 +219,12 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 #### 3 - Algoritmo de ordenação
 
 
+
 ### Requisitos bônus:
 
 #### 4 - Algoritmo de busca
 
-#### 5 - Escreva testes para as funções
 
-##### As seguintes verificações serão feitas:
-
-- Testes feitos para todas as funções criadas, para todos os requisitos;
-
-- Testes separados em arquivos, seguindo a mesma estrutura dos arquivos da pasta `challenges`;
-
-- A cobertura de testes é de no mínimo 90%.
 
 ### DURANTE O DESENVOLVIMENTO
 
