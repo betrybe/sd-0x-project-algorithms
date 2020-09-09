@@ -61,9 +61,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ## Entregáveis
 
-Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório. Este _Pull Request_ deverá conter os arquivos `...`, que conterão seu código `Python` e seus testes, respectivamente.
-
-<!-- DEFINIR O NOME DOS ARQUIVOS -->
+Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório. Este _Pull Request_ deverá conter os arquivos `challenge_anagrams.py`, `challenge_find_the_duplicate.py`, `challenge_palindromes_iterative.py`, `challenge_palindromes_recursive.py` e `challenge_study_schedule.py`, que conterão seu código `Python`, respectivamente.
 
 ### ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
 
@@ -93,27 +91,30 @@ Tendo essas habilidades descritas acima, junto com algumas outras, farão de voc
 
 ---
 
-## Desenvolvimento e testes
+## Desenvolvimento
 
 Este repositório é composto por uma pasta, `challenges`. Essa pasta contém todos os arquivos que você utilizará nesse projeto.
 
 Cada arquivo `.py`, dentro da pasta `challenges`, representa um requisito. Ou seja, os arquivos não tem ligação uns com os outros. Logo, os problemas devem ser resolvidos de forma separada.
 
-Este repositório já contém um _template_ com a estrutura de diretórios e arquivos, tanto de código quanto de teste criados. Veja abaixo:
+Este repositório já contém um _template_ com a estrutura de diretórios e arquivos,. Veja abaixo:
 
 ```md
 .
 ├── challenges
-│   ├── challenge_
-│   └── challenge_
+│   ├── challenge_anagrams.py
+│   ├── challenge_find_the_duplicate.py
+│   ├── challenge_palindromes_iterative.py
+│   ├── challenge_palindromes_recursive.py
+│   └── challenge_study_schedule.py
 ├── README.md
 ├── requirements.txt
 └── setup.cfg
 ```
 
-Apesar do projeto já possuir uma estrutura base, você quem deve implementar tanto as funções quanto os testes. Novos arquivos podem ser criados conforme a necessidade.
+Apesar do projeto já possuir uma estrutura base, você quem deve implementar as funções. Novos arquivos podem ser criados conforme a necessidade.
 
-Para executar os testes, lembre-se de primeiro **criar e ativar o ambiente virtual**, além de também instalar as dependências do projeto. Isso pode ser feito através dos comandos:
+Lembre-se de primeiro **criar e ativar o ambiente virtual**, além de também instalar as dependências do projeto. Isso pode ser feito através dos comandos:
 
 ```bash
 $ python3 -m venv .venv
@@ -123,11 +124,7 @@ $ source .venv/bin/activate
 $ python3 -m pip install -r requirements.txt
 ```
 
-O arquivo `requirements.txt` contém todos as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`. Com as dependências já instaladas, para executar os testes basta usar o comando:
-
-```bash
-$ python3 -m pytest
-```
+O arquivo `requirements.txt` contém todos as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`.
 
 Se quiser saber mais sobre a instalação de dependências com `pip`, veja esse artigo: https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1
 
@@ -140,16 +137,14 @@ $ python3 -m flake8
 Para executar cada arquivo separadamente, execute o comando:
 
 ```bash
-$ python3 -m nome_do_arquivo.py
+$ python3 nome_do_arquivo.py
 ```
 
 ---
 
 ## Requisitos obrigatórios:
 
-### Resolução de problemas
-
-#### 1 - Número de estudantes estudando no mesmo horário
+#### 1 - Número de estudantes estudando no mesmo horário (Algoritmo de busca)
 
 Você trabalha na maior empresa de educação do Brasil. Um certo dia, sua/seu `PM` quer saber qual horário tem a maior quantidade de pessoas acessando o conteúdo da plataforma ao mesmo tempo. Com esse dado em mãos, o/a PM saberá qual é o melhor horário para disponibilizar os materiais de estudo para ter o maior engajamento possível no sistema.
 
@@ -199,7 +194,7 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 ##### As seguintes verificações serão feitas:
 
-- Complexidade de tempo esperada: `O(n)`;
+- Complexidade de tempo esperada: `O(n)`, ou melhor;
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -207,37 +202,75 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 - Caso o `target_time` passado não exista, o valor retornado pela função deve ser `0`;
 
-- Código deve ser feito dentro do arquivo `challenge_study_schedule.py`
+- Código deve ser feito dentro do arquivo `challenge_study_schedule.py`.
 
-#### 2 - Recursividade
+#### 2 - Palíndromos (Recursividade)
 
+Dado uma _string_, determine se ela é um palíndromo ou não. Escreva uma função que irá determinar se uma _string_ é um palíndromo ou não. Um palíndromo é uma _string_, uma palavra, em que não faz diferença se ela é lida da esquerda para a direita ou vice-versa, pois ela mantêm o mesmo sentido. Por exemplo, `"ABCBA"`.
 
+_Curiosidade:_ Existem frases palíndromas também, porém nesse exercício iremos fazer uma função que identifique apenas as palavras palíndromas.
 
-#### 3 - Algoritmo de ordenação
+**Exemplos:**
+
+```md
+word = "ANA"
+# saída: True
+
+word = "SOCOS"
+# saída: True
+
+word = "REVIVER"
+# saída: True
+
+word = "COXINHA"
+# saída: False
+
+word = "AGUA"
+# saída: False
+```
+
+##### As seguintes verificações serão feitas:
+
+- O algoritmo deve ser feito utilizando a solução recursiva;
+
+- Não se preocupe com a analise da complexidade desse algoritmo;
+
+- Se for passado uma _string_ vazia, retorne `False`;
+
+- Código deve ser feito dentro do arquivo `challenge_palindromes_recursive.py`.
+
+#### 3 - Anagramas (Algoritmo de ordenação)
 
 Faça um algoritmo que consiga comparar duas _strings_ e identificar se uma é um anagrama da outra. Ou seja, sua função irá receber duas strings de parâmetro e o retorno da função será um _booleano_, `True` ou `False`.
 
-**Exemplo**:
+Mas o que é um anagrama? Vamos ver sua definição para entendermos melhor:
+
+> "Um anagrama é uma espécie de jogo de palavras criado com a reorganização das letras de uma palavra ou expressão para produzir outras palavras ou expressões, utilizando todas as letras originais exatamente uma vez."
+
+**Exemplo:**
 
 ```md
-first_string = "ana"
-second_string = "ana"
+first_string = "amor"
+second_string = "roma"
 # saída: True
-# Explicação: Nesse caso o retorno da função é True, pois a palavra "ana" é um anagrama.
+# Explicação: Nesse caso o retorno da função é True, pois a palavra "roma" é um anagrama de "amor".
 
 
-# Vamos ver um exemplo um pouco mais difícil? Ana foi simples de enxergar que era um anagrama
+first_string = "pedra"
+second_string = "perda"
+# saída: True
+# Explicação: Nesse caso o retorno também é True. Na palavra "pedra", trocamos o "d" de lugar com o "r" e formamos "perda", sendo assim um anagrama.  
+
+
 first_string = "pato"
 second_string = "tapo"
 # saída: True
-# Explicação: Nesse caso o retorno também é True, pois tapo é um anagrama para pato.
 
 
 # Agora vamos pra um exemplo onde não existe um anagrama
 first_string = "coxinha"
 second_string = "empada"
 # saída: False
-# Explicação: Bom, nesse caso a palavra empada não é um anagrama para coxinha e vice versa.
 ```
 
 ##### As seguintes verificações serão feitas:
@@ -252,13 +285,64 @@ second_string = "empada"
 
 - A função retorna `False` caso uma _string_ **não seja** um anagrama da outra;
 
-- Código deve ser feito dentro do arquivo `challenge_anagrams.py`;
+- Código deve ser feito dentro do arquivo `challenge_anagrams.py`.
 
 ### Requisitos bônus:
 
-#### 4 - Algoritmo de busca
+#### 4 - Encontrando números repetidos (Algoritmo de busca)
 
+Dada um _array_ de números inteiros contendo `n + 1` inteiros, chamado de `nums`, onde cada inteiro está no intervalo `[1, n]`.
 
+Retorne apenas um número duplicado em `nums`.
+
+**Exemplo:**
+
+```md
+nums = [1, 3, 4, 2, 2]
+# saída: 2
+
+nums = [3, 1, 3, 4, 2]
+# saída: 3
+
+nums = [1, 1]
+# saída: 1
+
+nums = [1, 1, 2]
+# saída: 1
+
+nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
+# saída: 7
+```
+
+##### As seguintes verificações serão feitas:
+
+- Complexidade de tempo esperada: `O(n log n)`;
+
+- Faça o algoritmo aplicando busca binária;
+
+- O array montado deve:
+
+  - Ter apenas números inteiros positivos maiores do que 1;
+
+  - Ter apenas um único número repetindo duas ou mais vezes, todos os outros números devem aparecer apenas uma vez;
+
+  - Ter, no mínimo, dois números.
+
+- Código deve ser feito dentro do arquivo `challenge_find_the_duplicate.py`.
+
+_Dica:_ Ordene o array.
+
+#### 5 - Palíndromos (Iteratividade)
+
+Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-(Recursividade)), porém dessa vez utilizando a solução iterativa.
+
+##### As seguintes verificações serão feitas:
+
+- Complexidade de tempo esperada: `O(n)`;
+
+- Algoritmo deve utilizar a solução iterativa;
+
+- Código deve ser feito dentro do arquivo `challenge_palindromes_iterative.py`.
 
 ### DURANTE O DESENVOLVIMENTO
 

@@ -43,5 +43,4 @@ plugins:
     enabled: true
 exclude_patterns:
   - "requirements.txt"
-  - "tests/"
   - ".venv/"
