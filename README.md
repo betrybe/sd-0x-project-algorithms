@@ -194,7 +194,7 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 ##### As seguintes verificações serão feitas:
 
-- Complexidade de tempo esperada: `O(n)`, ou melhor;
+- Limite de complexidade de tempo aceitável: `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -275,7 +275,7 @@ second_string = "empada"
 
 ##### As seguintes verificações serão feitas:
 
-- Complexidade de tempo esperada: `O(n log n)`;
+- Limite de complexidade de tempo aceitável: `O(n log n)`;
 
 - Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_, _Quick sort_ ou _TimSort_), desde que atinja a complexidade `O(n log n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
 
@@ -316,9 +316,9 @@ nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 
 ##### As seguintes verificações serão feitas:
 
-- Complexidade de tempo esperada: `O(n log n)`;
+- Limite de complexidade de tempo aceitável: `O(n log n)`;
 
-- Faça o algoritmo aplicando busca binária;
+- Faça o algoritmo aplicando busca binária e utilizando a solução iterativa;
 
 - O array montado deve:
 
@@ -338,7 +338,7 @@ Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-
 
 ##### As seguintes verificações serão feitas:
 
-- Complexidade de tempo esperada: `O(n)`;
+- Limite de complexidade de tempo aceitável: `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
 
