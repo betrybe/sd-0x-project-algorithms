@@ -165,7 +165,7 @@ end_time   = [2, 2, 3, 5, 5, 5]
 
 target_time = 5  # saída: 3, pois o quarto, o quinto e o sexto estudante estavam estudando nesse horário
 target_time = 4  # saída: 3, pois o quarto, o quinto e o sexto estudante estavam estudando nesse horário ou em um horário em que o 4 está no meio (no caso do quarto estudante)
-target_time = 3  # saída: 2, pois o terceiro, o quarto e o quinto estudante estavam estudando nesse horário ou em um horário em que o 3 está no meio (no caso do quarto estudante)
+target_time = 3  # saída: 2, pois o terceiro e o quarto estudante estavam estudando nesse horário ou em um horário em que o 3 está no meio (no caso do quarto estudante)
 target_time = 2  # saída: 4, pois o primeiro, o segundo, o terceiro e o quarto estudante estavam estudando nesse horário ou em um horário em que o 2 está no meio
 target_time = 1  # saída: 2, pois o segundo e o quarto estudante estavam estudando nesse horário
 
