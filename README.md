@@ -121,7 +121,7 @@ $ python3 -m venv .venv
 
 $ source .venv/bin/activate
 
-$ python3 -m pip install -r requirements.txt
+$ python3 -m pip install -r dev-requirements.txt
 ```
 
 O arquivo `requirements.txt` contém todos as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`.
@@ -192,8 +192,6 @@ target_time = 1  # saída: 1, pois só o segundo estudante estudou no horário 1
 Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 ```
 
-##### As seguintes verificações serão feitas:
-
 - Limite de complexidade de tempo aceitável: `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
@@ -202,7 +200,17 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 - Caso o `target_time` passado não exista, o valor retornado pela função deve ser `0`;
 
-- Código deve ser feito dentro do arquivo `challenge_study_schedule.py`.
+- Código deve ser feito dentro do arquivo `challenges/challenge_study_schedule.py`.
+
+##### As seguintes verificações serão feitas:
+
+**[Será validado se é possível visualizar melhor horário para disponibilizar conteúdo]**
+
+**[Será validado se é possível visualizar melhor horário quando mais de um `target_time` empata com a maior saída]**
+
+**[Será validado que `start_time` com valor vazio retorna 0]**
+
+**[Será validado que `target_time` com valor vazio retorna 0]**
 
 #### 2 - Palíndromos (Recursividade)
 
