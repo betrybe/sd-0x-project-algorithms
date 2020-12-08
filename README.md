@@ -237,15 +237,21 @@ word = "AGUA"
 # saída: False
 ```
 
-##### As seguintes verificações serão feitas:
-
 - O algoritmo deve ser feito utilizando a solução recursiva;
 
 - Não se preocupe com a analise da complexidade desse algoritmo;
 
 - Se for passado uma _string_ vazia, retorne `False`;
 
-- Código deve ser feito dentro do arquivo `challenge_palindromes_recursive.py`.
+- Código deve ser feito dentro do arquivo `challenges/challenge_palindromes_recursive.py`.
+
+##### As seguintes verificações serão feitas:
+
+**[Será validado que a funcão retorna se a palavra um palíndromo com sucesso]**
+
+**[Será validado que a funcão retorna se é a palavra não é um palíndromo com sucesso]**
+
+**[Será validado que a funcão retorna false quando não é enviado a palavra]**
 
 #### 3 - Anagramas (Algoritmo de ordenação)
 
