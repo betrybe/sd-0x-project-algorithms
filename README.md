@@ -287,8 +287,6 @@ second_string = "empada"
 # saída: False
 ```
 
-##### As seguintes verificações serão feitas:
-
 - Limite de complexidade de tempo aceitável: `O(n log n)`;
 
 - Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_, _Quick sort_ ou _TimSort_), desde que atinja a complexidade `O(n log n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
@@ -299,7 +297,17 @@ second_string = "empada"
 
 - A função retorna `False` caso uma _string_ **não seja** um anagrama da outra;
 
-- Código deve ser feito dentro do arquivo `challenge_anagrams.py`.
+- Código deve ser feito dentro do arquivo `challenges/challenge_anagrams.py`.
+
+##### As seguintes verificações serão feitas:
+
+**[Será validado se as palavras são um anagrama]**
+
+**[Será validado se as palavras não são um anagrama]**
+
+**[Será validado se passar a primeira palavra em branco o retorno da função e false]**
+
+**[Será validado se passar a segunda palavra em branco o retorno da função e false]**
 
 ### Requisitos bônus:
 

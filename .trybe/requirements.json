@@ -34,6 +34,26 @@
       "identifier": "test_validar_se_nao_passar_palavra_retorna_false",
       "description": "Será validado que a funcão retorna false quando não é enviado a palavra",
       "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_as_palavras_sao_um_anagrama",
+      "description": "Será validado se as palavras são um anagrama",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_as_palavras_nao_sao_um_anagrama",
+      "description": "Será validado se as palavras não são um anagrama",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_passar_primeira_palavra_em_branco_retorna_false",
+      "description": "Será validado se passar a primeira palavra em branco o retorno da função e false",
+      "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_passar_segunda_palavra_em_branco_retorna_false",
+      "description": "Será validado se passar a segunda palavra em branco o retorno da função e false",
+      "bonus": false
     }
   ]
 }
