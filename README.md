@@ -335,8 +335,7 @@ nums = [1, 1, 2]
 nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 # saída: 7
 ```
-
-##### As seguintes verificações serão feitas:
+- Caso não passe nenhum valor ou uma string ou não houver números repetidos retorne false;
 
 - Limite de complexidade de tempo aceitável: `O(n log n)`;
 
@@ -353,6 +352,20 @@ nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 - Código deve ser feito dentro do arquivo `challenge_find_the_duplicate.py`.
 
 _Dica:_ Ordene o array.
+
+##### As seguintes verificações serão feitas:
+
+**[Será validado que encontra os números repetidos]**
+
+**[Será validado se retorna false quando não enviar valores]**
+
+**[Será validado se retorna false quando envia string]**
+
+**[Será validado se retorna false quando não há repetição]**
+
+**[Será validado se retorna false quando passa um número]**
+
+**[Será validado se retorna false quando passa número negativo]**
 
 #### 5 - Palíndromos (Iteratividade)
 

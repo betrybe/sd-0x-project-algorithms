@@ -54,6 +54,36 @@
       "identifier": "test_validar_se_passar_segunda_palavra_em_branco_retorna_false",
       "description": "Será validado se passar a segunda palavra em branco o retorno da função e false",
       "bonus": false
+    },
+    {
+      "identifier": "test_validar_se_encontra_numeros_repetidos",
+      "description": "Será validado que encontra os números repetidos",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_nao_envia_valores",
+      "description": "Será validado se retorna false quando não enviar valores",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_envia_string",
+      "description": "Será validado se retorna false quando envia string",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_nao_ha_repeticao",
+      "description": "Será validado se retorna false quando não há repetição",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_passa_um_numero",
+      "description": "Será validado se retorna false quando passa um número",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_retorna_false_quando_passa_numero_negativo",
+      "description": "Será validado se retorna false quando passa número negativo",
+      "bonus": true
     }
   ]
 }
