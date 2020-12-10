@@ -84,6 +84,21 @@
       "identifier": "test_validar_se_retorna_false_quando_passa_numero_negativo",
       "description": "Será validado se retorna false quando passa número negativo",
       "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_a_palavra_e_um_palindromo_iterativo_retorna_true",
+      "description": "Será validado que se a palavra é um palindromo interativa retorna true",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_a_palavra_nao_e_um_palindromo_iterativo_retorna_false",
+      "description": "Será validado se a palavra não é um palindromo iterativa irá retornar false",
+      "bonus": true
+    },
+    {
+      "identifier": "test_validar_se_nao_passar_palavra_iterativa_retorna_false",
+      "description": "Será validado se não passar uma palavra iterativa irá retornar false",
+      "bonus": true
     }
   ]
 }

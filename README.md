@@ -371,13 +371,19 @@ _Dica:_ Ordene o array.
 
 Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-(Recursividade)), porém dessa vez utilizando a solução iterativa.
 
-##### As seguintes verificações serão feitas:
-
 - Limite de complexidade de tempo aceitável: `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
 
 - Código deve ser feito dentro do arquivo `challenge_palindromes_iterative.py`.
+
+##### As seguintes verificações serão feitas:
+
+**[Será validado que se a palavra é um palindromo interativa retorna true]**
+
+**[Será validado se não passar uma palavra iterativa irá retornar false]**
+
+**[Será validado se a palavra não é um palindromo iterativa irá retornar false]**
 
 ### DURANTE O DESENVOLVIMENTO
 
