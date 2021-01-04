@@ -1,13 +1,13 @@
 from challenges.challenge_anagrams import is_anagram
 
 
-def test_validar_se_as_palavras_sao_um_anagrama():
+def test_validar_se_as_palavras_nao_sao_um_anagrama():
     first_string = "pedra"
     second_string = "perdaaa"
     assert is_anagram(first_string, second_string) is False
 
 
-def test_validar_se_as_palavras_nao_sao_um_anagrama():
+def test_validar_se_as_palavras_sao_um_anagrama():
     first_string = "pedra"
     second_string = "perda"
     assert is_anagram(first_string, second_string) is True
