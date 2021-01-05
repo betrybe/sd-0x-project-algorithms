@@ -102,22 +102,22 @@
     },
     {
       "identifier": "test_validar_tempo_anagrama",
-      "description": "Será validado se tempo de execução do teste e menor que 2",
+      "description": "Será validado se tempo de execução da função é menor que 2",
       "bonus": false
     },
     {
       "identifier": "test_validar_tempo_duplicate",
-      "description": "Será validado se tempo de execução do teste e menor que 0.01",
+      "description": "Será validado se tempo de execução da função é menor que 0.01",
       "bonus": false
     },
     {
       "identifier": "test_validar_tempo_iterative",
-      "description": "Será validado se tempo de execução do teste e menor que 0.005",
+      "description": "Será validado se tempo de execução da função é menor que 0.005",
       "bonus": false
     },
     {
       "identifier": "test_validar_tempo_schedule",
-      "description": "Será validado se tempo de execução do teste e menor que 0.2",
+      "description": "Será validado se tempo de execução da função é menor que 0.2",
       "bonus": false
     }
   ]

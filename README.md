@@ -212,7 +212,7 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 **[Será validado que `target_time` com valor vazio retorna 0]**
 
-**[Será validado se tempo de execução do teste é menor que 0.02]**
+**[Será validado se tempo de execução da função é menor que 0.02]**
 
 #### 2 - Palíndromos (Recursividade)
 
@@ -311,7 +311,7 @@ second_string = "empada"
 
 **[Será validado se passar a segunda palavra em branco o retorno da função e false]**
 
-**[Será validado se tempo de execução do teste é menor que 2]**
+**[Será validado se tempo de execução da função é menor que 2]**
 
 ### Requisitos bônus:
 
@@ -371,7 +371,7 @@ _Dica:_ Ordene o array.
 
 **[Será validado se retorna false quando passa número negativo]**
 
-**[Será validado se tempo de execução do teste é menor que 0.01]**
+**[Será validado se tempo de execução da função é menor que 0.01]**
 
 #### 5 - Palíndromos (Iteratividade)
 
@@ -391,7 +391,7 @@ Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-
 
 **[Será validado se a palavra não é um palindromo iterativa irá retornar false]**
 
-**[Será validado se tempo de execução do teste é menor que 0.005]**
+**[Será validado se tempo de execução da função é menor que 0.005]**
 
 ### DURANTE O DESENVOLVIMENTO
 
