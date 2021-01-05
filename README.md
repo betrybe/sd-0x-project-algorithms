@@ -212,6 +212,8 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 **[Será validado que `target_time` com valor vazio retorna 0]**
 
+**[Será validado se tempo de execução do teste é menor que 0.02]**
+
 #### 2 - Palíndromos (Recursividade)
 
 Dado uma _string_, determine se ela é um palíndromo ou não. Escreva uma função que irá determinar se uma _string_ é um palíndromo ou não. Um palíndromo é uma _string_, uma palavra, em que não faz diferença se ela é lida da esquerda para a direita ou vice-versa, pois ela mantêm o mesmo sentido. Por exemplo, `"ABCBA"`.
@@ -309,6 +311,8 @@ second_string = "empada"
 
 **[Será validado se passar a segunda palavra em branco o retorno da função e false]**
 
+**[Será validado se tempo de execução do teste é menor que 2]**
+
 ### Requisitos bônus:
 
 #### 4 - Encontrando números repetidos (Algoritmo de busca)
@@ -367,6 +371,8 @@ _Dica:_ Ordene o array.
 
 **[Será validado se retorna false quando passa número negativo]**
 
+**[Será validado se tempo de execução do teste é menor que 0.01]**
+
 #### 5 - Palíndromos (Iteratividade)
 
 Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-(Recursividade)), porém dessa vez utilizando a solução iterativa.
@@ -384,6 +390,8 @@ Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-
 **[Será validado se não passar uma palavra iterativa irá retornar false]**
 
 **[Será validado se a palavra não é um palindromo iterativa irá retornar false]**
+
+**[Será validado se tempo de execução do teste é menor que 0.005]**
 
 ### DURANTE O DESENVOLVIMENTO
 
