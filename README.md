@@ -192,11 +192,9 @@ target_time = 1  # saída: 1, pois só o segundo estudante estudou no horário 1
 Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 ```
 
-- Lembre que o limite de execução da função deve ser o menor tempo possível.
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.02 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, no avaliador, devem acontecer integralmente em menos de 0.02 segundos.
-
-* Dica: use um algoritmo de, no máximo, complexidade `O(n)`;
+**Dica:** use um algoritmo de, no máximo, complexidade `O(n)`
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -208,15 +206,15 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 ##### As seguintes verificações serão feitas:
 
-**[Será validado se é possível visualizar melhor horário para disponibilizar conteúdo]**
+**[Retorne, para uma entrada específica, o melhor horário para disponibilizar o conteúdo]**
 
-**[Será validado se é possível visualizar melhor horário quando mais de um `target_time` empata com a maior saída]**
+**[Retorne, quando mais de um `target_time` empata com a maior saída, o melhor horário para disponibilizar o conteúdo]**
 
-**[Será validado que `start_time` com valor vazio retorna 0]**
+**[Retorne `0` se  `start_time` recebe um valor vazio]**
 
-**[Será validado que `target_time` com valor vazio retorna 0]**
+**[Retorne `0` se  `target_time` recebe um valor vazio]**
 
-**[Será validado se tempo de execução da função é menor que 0.02]**
+**[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.02s (tempo da execução do avaliador no Pull Request)]**
 
 #### 2 - Palíndromos (Recursividade)
 
@@ -253,11 +251,11 @@ word = "AGUA"
 
 ##### As seguintes verificações serão feitas:
 
-**[Será validado que a funcão retorna se a palavra um palíndromo com sucesso]**
+**[Retorne `true` se a palavra passada por parâmetro for um palíndromo]**
 
-**[Será validado que a funcão retorna se é a palavra não é um palíndromo com sucesso]**
+**[Retorne `false` se a palavra passada por parâmetro não for um palíndromo]**
 
-**[Será validado que a funcão retorna false quando não é enviado a palavra]**
+**[Retorne `false` se nenhuma palavra for passada por parâmetro]**
 
 #### 3 - Anagramas (Algoritmo de ordenação)
 
@@ -292,11 +290,10 @@ first_string = "coxinha"
 second_string = "empada"
 # saída: False
 ```
-- Lembre que o limite de execução da função deve ser o menor tempo possível.
 
-- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, no avaliador, devem acontecer integralmente em menos de 0.005 segundos.
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 2 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-* Dica: use um algoritmo de, no máximo, complexidade `O(n log n)`;
+**Dica:** use um algoritmo de, no máximo, complexidade `O(n log n)`
 
 - Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_, _Quick sort_ ou _TimSort_), desde que atinja a complexidade `O(n log n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
 
@@ -310,15 +307,15 @@ second_string = "empada"
 
 ##### As seguintes verificações serão feitas:
 
-**[Será validado se as palavras são um anagrama]**
+**[Retorne `true` se as palavras passadas forem anagramas]**
 
-**[Será validado se as palavras não são um anagrama]**
+**[Retorne `false` se as palavras passadas por parâmetro não forem anagramas]**
 
-**[Será validado se passar a primeira palavra em branco o retorno da função e false]**
+**[Retorne `false` se a primeira palavra passada por parâmetro for uma string vazia]**
 
-**[Será validado se passar a segunda palavra em branco o retorno da função e false]**
+**[Retorne `false` se a segunda palavra passada por parâmetro for uma string vazia]**
 
-**[Será validado se tempo de execução da função é menor que 2]**
+**[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 2s (tempo da execução do avaliador no Pull Request)]**
 
 ### Requisitos bônus:
 
@@ -348,11 +345,9 @@ nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 ```
 - Caso não passe nenhum valor ou uma string ou não houver números repetidos retorne false;
 
-- Lembre que o limite de execução da função deve ser o menor tempo possível.
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.01 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, no avaliador, devem acontecer integralmente em menos de 0.01 segundos.
-
-* Dica: use um algoritmo de, no máximo, complexidade `O(n log n)`;
+**Dica:** use um algoritmo de, no máximo, complexidade `O(n log n)`
 
 - Faça o algoritmo aplicando busca binária e utilizando a solução iterativa;
 
@@ -370,29 +365,27 @@ _Dica:_ Ordene o array.
 
 ##### As seguintes verificações serão feitas:
 
-**[Será validado que encontra os números repetidos]**
+**[Retorne o número repetivo se a função receber, como parâmetro, uma lista com números repetidos]**
 
-**[Será validado se retorna false quando não enviar valores]**
+**[Retorne `false` se a função não receber nenhum parâmetro]**
 
-**[Será validado se retorna false quando envia string]**
+**[Retorne `false` se a função receber, como parâmetro, uma string]**
 
-**[Será validado se retorna false quando não há repetição]**
+**[Retorne `false` se a função receber, como parâmetro, uma lista sem números repetidos]**
 
-**[Será validado se retorna false quando passa um número]**
+**[Retorne `false` se a função receber, como parâmetro, apenas um valor]**
 
-**[Será validado se retorna false quando passa número negativo]**
+**[Retorne `false` se a função receber, como parâmetro, um número negativo]**
 
-**[Será validado se tempo de execução da função é menor que 0.01]**
+**[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.01s (tempo da execução do avaliador no Pull Request)]**
 
 #### 5 - Palíndromos (Iteratividade)
 
 Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-(Recursividade)), porém dessa vez utilizando a solução iterativa.
 
-- Lembre que o limite de execução da função deve ser o menor tempo possível.
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.005 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, no avaliador, devem acontecer integralmente em menos de 0.005 segundos.
-
-* Dica: use um algoritmo de, no máximo, complexidade `O(n)`;
+**Dica:** use um algoritmo de, no máximo, complexidade `O(n)`
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -400,13 +393,13 @@ Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-
 
 ##### As seguintes verificações serão feitas:
 
-**[Será validado que se a palavra é um palindromo interativa retorna true]**
+**[Retorne `true` se a palavra passada como parâmetro for um palíndromo, executando uma função iterativa]**
 
-**[Será validado se não passar uma palavra iterativa irá retornar false]**
+**[Retorne `false` se nenhuma palavra for passada como parâmetro, executando uma função iterativa]**
 
-**[Será validado se a palavra não é um palindromo iterativa irá retornar false]**
+**[Retorne true se a palavra passada como parâmetro for um palíndromo, executando uma função iterativa]**
 
-**[Será validado se tempo de execução da função é menor que 0.005]**
+**[[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.005s (tempo da execução do avaliador no Pull Request)]**
 
 ### DURANTE O DESENVOLVIMENTO
 
