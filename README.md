@@ -194,7 +194,9 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 - Lembre que o limite de execução da função deve ser o menor tempo possível.
 
-* Dica sobre o tempo de execução é usar a complexidade: `O(n)`;
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, no avaliador, devem acontecer integralmente em menos de 0.02 segundos.
+
+* Dica: use um algoritmo de, no máximo, complexidade `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -292,7 +294,9 @@ second_string = "empada"
 ```
 - Lembre que o limite de execução da função deve ser o menor tempo possível.
 
-* Dica sobre o tempo de execução é usar a complexidade: `O(n log n)`;
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, no avaliador, devem acontecer integralmente em menos de 0.005 segundos.
+
+* Dica: use um algoritmo de, no máximo, complexidade `O(n log n)`;
 
 - Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_, _Quick sort_ ou _TimSort_), desde que atinja a complexidade `O(n log n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
 
@@ -346,7 +350,9 @@ nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 
 - Lembre que o limite de execução da função deve ser o menor tempo possível.
 
-* Dica sobre o tempo de execução é usar a complexidade: `O(n log n)`;
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, no avaliador, devem acontecer integralmente em menos de 0.01 segundos.
+
+* Dica: use um algoritmo de, no máximo, complexidade `O(n log n)`;
 
 - Faça o algoritmo aplicando busca binária e utilizando a solução iterativa;
 
@@ -384,7 +390,9 @@ Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-
 
 - Lembre que o limite de execução da função deve ser o menor tempo possível.
 
-* Dica sobre o tempo de execução é usar a complexidade: `O(n)`;
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, no avaliador, devem acontecer integralmente em menos de 0.005 segundos.
+
+* Dica: use um algoritmo de, no máximo, complexidade `O(n)`;
 
 - Algoritmo deve utilizar a solução iterativa;
 
