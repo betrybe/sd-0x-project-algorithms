@@ -12,9 +12,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 1. Clone o repositório
 
-- `git clone git@github.com:tryber/sd-0x-algorithms.git`.
+- `git clone https://github.com/betrybe/sd-0x-project-algorithms.git`.
 - Entre na pasta do repositório que você acabou de clonar:
-  - `sd-0x-algorithms`
+  - `sd-0x-project-algorithms`
 
 2. Crie o ambiente virtual para o projeto
 
@@ -28,7 +28,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - Exemplo: `git checkout master`
 - Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
   - Você deve criar uma branch no seguinte formato: `nome-github-nome-do-projeto`
-  - Exemplo: `git checkout -b exemplo-algorithms`
+  - Exemplo: `git checkout -b exemplo-project-algorithms`
 
 4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
 
@@ -49,13 +49,13 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 6. Crie um novo `Pull Request` _(PR)_
 
-- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-algorithms/pulls)
+- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-project-algorithms/pulls)
 - Clique no botão verde _"New pull request"_
 - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
 - Clique no botão verde _"Create pull request"_
 - Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
 - **Não se preocupe em preencher mais nada por enquanto!**
-- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-algorithms/pulls) e confira que o seu _Pull Request_ está criado
+- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-project-algorithms/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 
@@ -121,7 +121,7 @@ $ python3 -m venv .venv
 
 $ source .venv/bin/activate
 
-$ python3 -m pip install -r requirements.txt
+$ python3 -m pip install -r dev-requirements.txt
 ```
 
 O arquivo `requirements.txt` contém todos as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`.
@@ -192,9 +192,9 @@ target_time = 1  # saída: 1, pois só o segundo estudante estudou no horário 1
 Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 ```
 
-##### As seguintes verificações serão feitas:
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.02 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-- Limite de complexidade de tempo aceitável: `O(n)`;
+**Dica:** use um algoritmo de, no máximo, complexidade `O(n)`
 
 - Algoritmo deve utilizar a solução iterativa;
 
@@ -202,7 +202,19 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 - Caso o `target_time` passado não exista, o valor retornado pela função deve ser `0`;
 
-- Código deve ser feito dentro do arquivo `challenge_study_schedule.py`.
+- Código deve ser feito dentro do arquivo `challenges/challenge_study_schedule.py`.
+
+##### As seguintes verificações serão feitas:
+
+**[Retorne, para uma entrada específica, o melhor horário para disponibilizar o conteúdo]**
+
+**[Retorne, quando mais de um `target_time` empata com a maior saída, o melhor horário para disponibilizar o conteúdo]**
+
+**[Retorne `0` se  `start_time` recebe um valor vazio]**
+
+**[Retorne `0` se  `target_time` recebe um valor vazio]**
+
+**[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.02s (tempo da execução do avaliador no Pull Request)]**
 
 #### 2 - Palíndromos (Recursividade)
 
@@ -229,15 +241,21 @@ word = "AGUA"
 # saída: False
 ```
 
-##### As seguintes verificações serão feitas:
-
 - O algoritmo deve ser feito utilizando a solução recursiva;
 
 - Não se preocupe com a analise da complexidade desse algoritmo;
 
 - Se for passado uma _string_ vazia, retorne `False`;
 
-- Código deve ser feito dentro do arquivo `challenge_palindromes_recursive.py`.
+- Código deve ser feito dentro do arquivo `challenges/challenge_palindromes_recursive.py`.
+
+##### As seguintes verificações serão feitas:
+
+**[Retorne `true` se a palavra passada por parâmetro for um palíndromo]**
+
+**[Retorne `false` se a palavra passada por parâmetro não for um palíndromo]**
+
+**[Retorne `false` se nenhuma palavra for passada por parâmetro]**
 
 #### 3 - Anagramas (Algoritmo de ordenação)
 
@@ -273,9 +291,9 @@ second_string = "empada"
 # saída: False
 ```
 
-##### As seguintes verificações serão feitas:
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 2 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-- Limite de complexidade de tempo aceitável: `O(n log n)`;
+**Dica:** use um algoritmo de, no máximo, complexidade `O(n log n)`
 
 - Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_, _Quick sort_ ou _TimSort_), desde que atinja a complexidade `O(n log n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
 
@@ -285,7 +303,19 @@ second_string = "empada"
 
 - A função retorna `False` caso uma _string_ **não seja** um anagrama da outra;
 
-- Código deve ser feito dentro do arquivo `challenge_anagrams.py`.
+- Código deve ser feito dentro do arquivo `challenges/challenge_anagrams.py`.
+
+##### As seguintes verificações serão feitas:
+
+**[Retorne `true` se as palavras passadas forem anagramas]**
+
+**[Retorne `false` se as palavras passadas por parâmetro não forem anagramas]**
+
+**[Retorne `false` se a primeira palavra passada por parâmetro for uma string vazia]**
+
+**[Retorne `false` se a segunda palavra passada por parâmetro for uma string vazia]**
+
+**[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 2s (tempo da execução do avaliador no Pull Request)]**
 
 ### Requisitos bônus:
 
@@ -313,10 +343,11 @@ nums = [1, 1, 2]
 nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 # saída: 7
 ```
+- Caso não passe nenhum valor ou uma string ou não houver números repetidos retorne false;
 
-##### As seguintes verificações serão feitas:
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.01 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-- Limite de complexidade de tempo aceitável: `O(n log n)`;
+**Dica:** use um algoritmo de, no máximo, complexidade `O(n log n)`
 
 - Faça o algoritmo aplicando busca binária e utilizando a solução iterativa;
 
@@ -332,17 +363,43 @@ nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 
 _Dica:_ Ordene o array.
 
+##### As seguintes verificações serão feitas:
+
+**[Retorne o número repetivo se a função receber, como parâmetro, uma lista com números repetidos]**
+
+**[Retorne `false` se a função não receber nenhum parâmetro]**
+
+**[Retorne `false` se a função receber, como parâmetro, uma string]**
+
+**[Retorne `false` se a função receber, como parâmetro, uma lista sem números repetidos]**
+
+**[Retorne `false` se a função receber, como parâmetro, apenas um valor]**
+
+**[Retorne `false` se a função receber, como parâmetro, um número negativo]**
+
+**[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.01s (tempo da execução do avaliador no Pull Request)]**
+
 #### 5 - Palíndromos (Iteratividade)
 
 Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-(Recursividade)), porém dessa vez utilizando a solução iterativa.
 
-##### As seguintes verificações serão feitas:
+- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.005 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-- Limite de complexidade de tempo aceitável: `O(n)`;
+**Dica:** use um algoritmo de, no máximo, complexidade `O(n)`
 
 - Algoritmo deve utilizar a solução iterativa;
 
 - Código deve ser feito dentro do arquivo `challenge_palindromes_iterative.py`.
+
+##### As seguintes verificações serão feitas:
+
+**[Retorne `true` se a palavra passada como parâmetro for um palíndromo, executando uma função iterativa]**
+
+**[Retorne `false` se nenhuma palavra for passada como parâmetro, executando uma função iterativa]**
+
+**[Retorne true se a palavra passada como parâmetro for um palíndromo, executando uma função iterativa]**
+
+**[[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.005s (tempo da execução do avaliador no Pull Request)]**
 
 ### DURANTE O DESENVOLVIMENTO
 
