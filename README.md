@@ -395,7 +395,7 @@ Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-
 
 **[Retorne `false` se nenhuma palavra for passada como parâmetro, executando uma função iterativa]**
 
-**[Retorne true se a palavra passada como parâmetro for um palíndromo, executando uma função iterativa]**
+**[Retorne `false` se a palavra passada como parâmetro não for um palíndromo, executando uma função iterativa]**
 
 **[[Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.005s (tempo da execução do avaliador no Pull Request)]**
 
