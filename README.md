@@ -305,7 +305,7 @@ Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
 
 - Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.02 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-**Dica:** use um algoritmo de, no máximo, complexidade `O(n)`
+**Dica:** é possível resolver este problema na ordem de complexidade `O(n)`
 
 - Algoritmo deve utilizar a solução iterativa;
 
