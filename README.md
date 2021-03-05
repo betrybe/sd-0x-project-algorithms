@@ -261,9 +261,10 @@ Você trabalha na maior empresa de educação do Brasil. Um certo dia, sua/seu `
 
 Toda vez que uma pessoa estudante abre o sistema, é cadastrado no banco de dados o horário de entrada (`start_time`). Da mesma forma funciona quando o estudante sai do sistema, é cadastrado no banco de dados o horário de saída (`end_time`).
 
-Seu trabalho é descobrir qual o melhor horário para disponibilizar os conteúdos. Para achar o horário, utilize `força bruta`. Ou seja, para achar o melhor horário, passe valores diferentes para a variável `target_time`, analisando o retorno da função.
+Seu trabalho é fazer uma função `study_schedule` que permita, dado um conjunto de registros de acesso `start_time` e `end_time`, e um horário alvo `target_time`, descobrir quantas pessoas estão com o sistema aberto naquele horário.
 
-_Dica:_ Quando vou saber qual o melhor horário? Quando o contador retornado pela função for o maior.
+O seu banco de dados te provê os horários de acesso no seguinte formato:
+O índice `0` da lista `start_time` e o índice `0` da lista `end_time` são pertencentes **à mesma pessoa usuária**. Ou seja, o índice `0` da lista `start_time` e `end_time` são os horários de início e termino do estudo de uma pessoa usuária. O índice `1` da lista `start_time` e `end_time` são os horários de início e termino de estudos de outra pessoa usuária e por aí vai.
 
 **Exemplo:**
 
@@ -279,53 +280,20 @@ target_time = 4  # saída: 3, pois o quarto, o quinto e o sexto estudante estava
 target_time = 3  # saída: 2, pois o terceiro e o quarto estudante estavam estudando nesse horário ou em um horário em que o 3 está no meio (no caso do quarto estudante)
 target_time = 2  # saída: 4, pois o primeiro, o segundo, o terceiro e o quarto estudante estavam estudando nesse horário ou em um horário em que o 2 está no meio
 target_time = 1  # saída: 2, pois o segundo e o quarto estudante estavam estudando nesse horário
-
-Para esse exemplo, julgue que o melhor horário é o `2`
 ```
 
-O índice `0` da lista `start_time` e o índice `0` da lista `end_time` são pertencentes **à mesma pessoa usuária**. Ou seja, o índice `0` da lista `start_time` e `end_time` são os horários de início e termino do estudo de uma pessoa usuária. O índice `1` da lista `start_time` e `end_time` são os horários de início e termino de estudos de outra pessoa usuária e por aí vai.
+- O avaliador automático testará a eficiência do seu código. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-Caso mais de um `target_time` tenham empatado com a maior saída, o melhor horário é entre os horários empatados. Exemplo:
+**Dica:** É possível resolver este problema com um algoritmo de ordem de complexidade `O(n)`
 
-```md
-# Nos arrays temos 4 estudantes
-
-# estudante   1  2  3  4
-start_time = [4, 1, 3, 2]
-end_time   = [4, 3, 4, 5]
-
-target_time = 5  # saída: 1, pois só o estudante do último índice estudou até 5
-target_time = 4  # saída: 3, pois o primeiro estudante, o segundo e o último estudaram no horário de 4 ou em um horário que o 4 está no meio (no caso do último estudante)
-target_time = 3  # saída: 3, pois o segundo estudante, o terceiro e o último estudaram no horário de 3 ou em um horário que o 3 está no meio (no caso do último estudante)
-target_time = 2  # saída: 2, pois o segundo e o último estudante estudaram no horário de 2 ou em um horário que o 2 está no meio (no caso do segundo estudante)
-target_time = 1  # saída: 1, pois só o segundo estudante estudou no horário 1 (no caso começou no horário 1)
-
-Para esse exemplo, julgue que o melhor horário é entre `3` e `4`
-```
-
-- Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.02 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
-
-**Dica:** use um algoritmo de, no máximo, complexidade `O(n)`
-
-- Algoritmo deve utilizar a solução iterativa;
-
-- Monte o `start_time` e o `end_time` da maneira que quiser;
-
-- Caso o `target_time` passado não exista, o valor retornado pela função deve ser `0`;
-
-- Código deve ser feito dentro do arquivo `challenges/challenge_study_schedule.py`.
-
-**O que será verificado:**
-
-- 1.1 - Retorne, para uma entrada específica, o melhor horário para disponibilizar o conteúdo
-
-- 1.2 - Retorne, quando mais de um `target_time` empata com a maior saída, o melhor horário para disponibilizar o conteúdo
-
-- 1.3 - Retorne `0` se  `start_time` recebe um valor vazio
-
-- 1.4 - Retorne `0` se  `target_time` recebe um valor vazio
-
-- 1.5 - Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.02s (tempo da execução do avaliador no Pull Request)
+**Requisitos:**
+1.1. Faça o código dentro do arquivo `challenges/challenge_study_schedule.py`.
+1.2. Para uma entrada específica, retorne o horário com mais pessoas online.
+1.3. Caso o `target_time` passado não exista, retorne `0`;
+1.4. Se  `start_time` recebe um valor vazio, retorne  `0`;
+1.5. Se  `target_time` recebe um valor vazio retorne `0`;
+1.6. Utilize uma solução iterativa;
+1.7. A eficiência de tempo função deve ser suficiente para atender ao teste do avaliador automático.
 
 #### 2 - Palíndromos (Recursividade)
 
@@ -404,7 +372,7 @@ second_string = "empada"
 
 - Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 2 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-**Dica:** use um algoritmo de, no máximo, complexidade `O(n log n)`
+**Dica:** É possível resolver este problema com um algoritmo de ordem de complexidade `O(n log n)`
 
 - Utilize qualquer algoritmo que quiser (_Selection sort_, _Insertion sort_, _Bubble sort_, _Merge sort_, _Quick sort_ ou _TimSort_), desde que atinja a complexidade `O(n log n)`. Ou seja, preste bastante atenção na escolha do algoritmo e na implementação do mesmo;
 
@@ -458,7 +426,7 @@ nums = [3, 1, 2, 4, 6, 5, 7, 7, 7, 8]
 
 - Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.01 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-**Dica:** use um algoritmo de, no máximo, complexidade `O(n log n)`
+**Dica:** É possível resolver este problema com um algoritmo de ordem de complexidade `O(n log n)`
 
 - O array montado deve:
 
@@ -494,7 +462,7 @@ Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-
 
 - Este requisito será testado executando 10.000 vezes sobre uma mesma entrada. Tais execuções, **no avaliador**, devem acontecer integralmente em menos de 0.005 segundos. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
-**Dica:** use um algoritmo de, no máximo, complexidade `O(n)`
+**Dica:** É possível resolver este problema com um algoritmo de ordem de complexidade `O(n)`
 
 - Algoritmo deve utilizar a solução iterativa;
 
