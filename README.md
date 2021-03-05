@@ -296,45 +296,26 @@ target_time = 1  # saída: 2, pois o segundo e o quarto estudante estavam estuda
 1.7. A eficiência de tempo função deve ser suficiente para atender ao teste do avaliador automático.
 
 #### 2 - Palíndromos (Recursividade)
-
-Dado uma _string_, determine se ela é um palíndromo ou não. Escreva uma função que irá determinar se uma _string_ é um palíndromo ou não. Um palíndromo é uma _string_, uma palavra, em que não faz diferença se ela é lida da esquerda para a direita ou vice-versa, pois ela mantêm o mesmo sentido. Por exemplo, `"ABCBA"`.
-
-_Curiosidade:_ Existem frases palíndromas também, porém nesse exercício iremos fazer uma função que identifique apenas as palavras palíndromas.
+Uma palavra é considerada um palíndromo quando ela continua igual quando lida no sentido contrário.
 
 **Exemplos:**
+```python
+word = "ANA"  # True
 
-```md
-word = "ANA"
-# saída: True
+word = "SOCOS"  # True
 
-word = "SOCOS"
-# saída: True
+word = "REVIVER"  # True
 
-word = "REVIVER"
-# saída: True
+word = "COXINHA"  # False
 
-word = "COXINHA"
-# saída: False
-
-word = "AGUA"
-# saída: False
+word = "AGUA"  # False
 ```
 
-- O algoritmo deve ser feito utilizando a solução recursiva;
-
-- Não se preocupe com a analise da complexidade desse algoritmo;
-
+**Requisitos:** 
+- Implemente uma função que receba uma _string_, e retorne 'True' se a entrada for um palíndromo, ou 'False' se não for um palíndromo.;
 - Se for passado uma _string_ vazia, retorne `False`;
-
-- Código deve ser feito dentro do arquivo `challenges/challenge_palindromes_recursive.py`.
-
-**O que será verificado:**
-
-- 2.1 - Retorne `true` se a palavra passada por parâmetro for um palíndromo
-
-- 2.2 - Retorne `false` se a palavra passada por parâmetro não for um palíndromo
-
-- 2.3 - Retorne `false` se nenhuma palavra for passada por parâmetro
+- O algoritmo deve ser feito utilizando uma solução recursiva;
+- A função deve ser feita dentro do arquivo `challenges/challenge_palindromes_recursive.py`.
 
 #### 3 - Anagramas (Algoritmo de ordenação)
 
