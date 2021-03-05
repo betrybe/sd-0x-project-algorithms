@@ -255,7 +255,7 @@ python3 -m pytest tests/nomedoarquivo.py
 
 ## Requisitos do projeto
 
-#### 1 - Número de estudantes estudando no mesmo horário (Algoritmo de busca)
+### 1 - Número de estudantes estudando no mesmo horário (Algoritmo de busca)
 
 Você trabalha na maior empresa de educação do Brasil. Um certo dia, sua/seu `PM` quer saber qual horário tem a maior quantidade de pessoas acessando o conteúdo da plataforma ao mesmo tempo. Com esse dado em mãos, o/a PM saberá qual é o melhor horário para disponibilizar os materiais de estudo para ter o maior engajamento possível no sistema.
 
@@ -269,9 +269,8 @@ O índice `0` da lista `start_time` e o índice `0` da lista `end_time` são per
 **Exemplo:**
 
 ```md
-# Nos arrays temos 6 estudantes
-
-# estudante   1  2  3  4  5  6
+# Nos arrays temos 6 estudantes, um em cada "coluna"
+# estudante:  1  2  3  4  5  6
 start_time = [2, 1, 2, 1, 4, 4]
 end_time   = [2, 2, 3, 5, 5, 5]
 
@@ -282,20 +281,18 @@ target_time = 2  # saída: 4, pois o primeiro, o segundo, o terceiro e o quarto 
 target_time = 1  # saída: 2, pois o segundo e o quarto estudante estavam estudando nesse horário
 ```
 
-- O avaliador automático testará a eficiência do seu código. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
+**Requisitos:**
+1. Faça o código dentro do arquivo `challenges/challenge_study_schedule.py`.
+2. Para uma entrada específica, retorne o horário com mais pessoas online.
+3. Caso o `target_time` passado não exista, retorne `0`;
+4. Se  `start_time` recebe um valor vazio, retorne  `0`;
+5. Se  `target_time` recebe um valor vazio retorne `0`;
+6. Utilize uma solução iterativa;
+7. A eficiência de tempo função deve ser suficiente para atender ao teste do avaliador automático. O tempo de execução do código na sua máquina pode variar em relação ao avaliador, então é importante levar somente ele em consideração.
 
 **Dica:** É possível resolver este problema com um algoritmo de ordem de complexidade `O(n)`
 
-**Requisitos:**
-1.1. Faça o código dentro do arquivo `challenges/challenge_study_schedule.py`.
-1.2. Para uma entrada específica, retorne o horário com mais pessoas online.
-1.3. Caso o `target_time` passado não exista, retorne `0`;
-1.4. Se  `start_time` recebe um valor vazio, retorne  `0`;
-1.5. Se  `target_time` recebe um valor vazio retorne `0`;
-1.6. Utilize uma solução iterativa;
-1.7. A eficiência de tempo função deve ser suficiente para atender ao teste do avaliador automático.
-
-#### 2 - Palíndromos (Recursividade)
+### 2 - Palíndromos (Recursividade)
 Uma palavra é considerada um palíndromo quando ela continua igual quando lida no sentido contrário.
 
 **Exemplos:**
@@ -317,7 +314,7 @@ word = "AGUA"  # False
 - O algoritmo deve ser feito utilizando uma solução recursiva;
 - A função deve ser feita dentro do arquivo `challenges/challenge_palindromes_recursive.py`.
 
-#### 3 - Anagramas (Algoritmo de ordenação)
+### 3 - Anagramas (Algoritmo de ordenação)
 
 Faça um algoritmo que consiga comparar duas _strings_ e identificar se uma é um anagrama da outra. Ou seja, sua função irá receber duas strings de parâmetro e o retorno da função será um _booleano_, `True` ou `False`.
 
@@ -377,9 +374,9 @@ second_string = "empada"
 
 - 3.5 - Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 8.2s (tempo da execução do avaliador no Pull Request)
 
-### Requisitos bônus:
+## Requisitos bônus:
 
-#### 4 - Encontrando números repetidos (Algoritmo de busca)
+### 4 - Encontrando números repetidos (Algoritmo de busca)
 
 Dada um _array_ de números inteiros contendo `n + 1` inteiros, chamado de `nums`, onde cada inteiro está no intervalo `[1, n]`.
 
@@ -437,7 +434,7 @@ _Dica:_ Ordene o array.
 
 - 4.7 - Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 0.01s (tempo da execução do avaliador no Pull Request)
 
-#### 5 - Palíndromos (Iteratividade)
+### 5 - Palíndromos (Iteratividade)
 
 Resolva o mesmo problema, apresentado no [requisito dois](####-2---Palíndromos-(Recursividade)), porém dessa vez utilizando a solução iterativa.
 
